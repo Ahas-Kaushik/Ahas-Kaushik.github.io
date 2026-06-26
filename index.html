@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ahas Kaushik — AI/ML Developer & Student at BMS College of Engineering">
+    <title>Ahas Kaushik | AI/ML Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Particle Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="pre-logo">AK<span>.</span></div>
+        <div class="pre-bar"><div class="pre-fill"></div></div>
+    </div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a class="logo" href="#home">AK<span>.</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home"         class="nav-link active">Home</a></li>
+                <li><a href="#about"        class="nav-link">About</a></li>
+                <li><a href="#skills"       class="nav-link">Skills</a></li>
+                <li><a href="#projects"     class="nav-link">Projects</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact"      class="nav-link">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section id="home" class="section hero-section">
+        <div class="hero-wrapper">
+
+            <!-- Left: Text -->
+            <div class="hero-left">
+                <div class="hero-tag animate-in" data-delay="0">
+                    <span class="tag-dot"></span> Open to Internships &amp; Collaborations
+                </div>
+                <p class="hero-greeting animate-in" data-delay="1">Hello, I'm</p>
+                <h1 class="hero-name animate-in" data-delay="2">
+                    Ahas<br><span class="gradient-text">Kaushik</span>
+                </h1>
+                <div class="hero-role animate-in" data-delay="3">
+                    <span class="role-prefix">I build </span>
+                    <span id="typingEl" class="typing-text"></span>
+                    <span class="typing-cursor">|</span>
+                </div>
+                <p class="hero-bio animate-in" data-delay="4">
+                    AI/ML student at BMS College of Engineering crafting intelligent systems
+                    that bridge research and real-world impact — from NLP pipelines to
+                    computer vision tools.
+                </p>
+                <div class="hero-ctas animate-in" data-delay="5">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>Explore Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="Ahas_Resume.pdf" download class="btn btn-ghost">
+                        <span>Download CV</span>
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+                <div class="hero-socials animate-in" data-delay="6">
+                    <a href="https://github.com/Ahas-Kaushik" target="_blank" class="social-icon" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/ahas-kaushik" target="_blank" class="social-icon" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:ahaskaushik@gmail.com" class="social-icon" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Profile Visual -->
+            <div class="hero-right animate-in" data-delay="3">
+                <div class="profile-wrapper">
+                    <div class="orbit orbit-1"><div class="orbit-dot"></div></div>
+                    <div class="orbit orbit-2"><div class="orbit-dot"></div></div>
+                    <div class="orbit orbit-3"><div class="orbit-dot"></div></div>
+
+                    <div class="profile-frame">
+                        <img src="profile.jpg" alt="Ahas Kaushik" class="profile-img" id="profileImg">
+                        <div class="profile-fallback" id="profileFallback">AK</div>
+                    </div>
+
+                    <div class="float-badge badge-python">
+                        <i class="fab fa-python"></i> Python
+                    </div>
+                    <div class="float-badge badge-ml">
+                        <i class="fas fa-brain"></i> ML / AI
+                    </div>
+                    <div class="float-badge badge-cv">
+                        <i class="fas fa-eye"></i> Vision
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-down" onclick="scrollToSection('about')">
+            <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get to Know Me</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+
+                <div class="about-text reveal">
+                    <h3>Building tomorrow's intelligence, today.</h3>
+                    <p>
+                        I'm a dedicated AI/ML enthusiast pursuing B.E. in Artificial Intelligence
+                        &amp; Machine Learning at BMS College of Engineering, Bangalore (CGPA: 9.04).
+                        With a diploma in CSE from Siddaganga Polytechnic (CGPA: 9.70), I bring
+                        both theoretical depth and hands-on engineering experience.
+                    </p>
+                    <p>
+                        From building NLP systems that streamline recruitment to computer vision apps
+                        that enhance accessibility, I'm driven by the belief that AI should solve
+                        real problems. I've competed in national hackathons, led tech teams, and
+                        remain an active member of the Gradient Tech Club at BMSCE.
+                    </p>
+                    <div class="interest-row">
+                        <span class="interest-chip"><i class="fas fa-mountain"></i> Trekking</span>
+                        <span class="interest-chip"><i class="fas fa-plane"></i> Travelling</span>
+                        <span class="interest-chip"><i class="fas fa-swimming-pool"></i> Swimming</span>
+                        <span class="interest-chip"><i class="fas fa-futbol"></i> Football</span>
+                        <span class="interest-chip"><i class="fas fa-running"></i> Athletics</span>
+                        <span class="interest-chip"><i class="fas fa-microchip"></i> Hardware</span>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <span class="stat-num" data-target="9.04" data-decimal="true">0</span>
+                            <span class="stat-label">B.E. CGPA</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num" data-target="4">0</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num" data-target="6">0</span>
+                            <span class="stat-label">Hackathons</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-education reveal">
+                    <h3>Education</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-year">2024 – Present</span>
+                                <h4>B.E. Artificial Intelligence &amp; Machine Learning</h4>
+                                <p>BMS College of Engineering, Bangalore</p>
+                                <span class="edu-badge">CGPA: 9.04</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-year">2021 – 2024</span>
+                                <h4>Diploma in Computer Science Engineering</h4>
+                                <p>Siddaganga Polytechnic, Tumkur</p>
+                                <span class="edu-badge">CGPA: 9.70</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-year">2021</span>
+                                <h4>SSLC</h4>
+                                <p>Seshadripuram High School</p>
+                                <span class="edu-badge">89.5%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What I Know</span>
+                <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+
+                <div class="skill-category reveal">
+                    <div class="skill-cat-icon"><i class="fas fa-code"></i></div>
+                    <h3>Programming</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Python</span><span class="skill-pct">90%</span></div>
+                            <div class="bar-track"><div class="bar-fill" data-width="90"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>SQL</span><span class="skill-pct">75%</span></div>
+                            <div class="bar-track"><div class="bar-fill" data-width="75"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>HTML / CSS / JS</span><span class="skill-pct">70%</span></div>
+                            <div class="bar-track"><div class="bar-fill" data-width="70"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category reveal">
+                    <div class="skill-cat-icon"><i class="fas fa-brain"></i></div>
+                    <h3>AI &amp; Machine Learning</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>NLP / NLU / NLG</span><span class="skill-pct">85%</span></div>
+                            <div class="bar-track"><div class="bar-fill" data-width="85"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Large Language Models</span><span class="skill-pct">80%</span></div>
+                            <div class="bar-track"><div class="bar-fill" data-width="80"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Computer Vision</span><span class="skill-pct">82%</span></div>
+                            <div class="bar-track"><div class="bar-fill" data-width="82"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category reveal">
+                    <div class="skill-cat-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Data Science</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Data Analysis</span><span class="skill-pct">80%</span></div>
+                            <div class="bar-track"><div class="bar-fill" data-width="80"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Deep Learning</span><span class="skill-pct">78%</span></div>
+                            <div class="bar-track"><div class="bar-fill" data-width="78"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info"><span>Model Training &amp; Eval</span><span class="skill-pct">82%</span></div>
+                            <div class="bar-track"><div class="bar-fill" data-width="82"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category reveal">
+                    <div class="skill-cat-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Tools &amp; Frameworks</h3>
+                    <div class="tech-pills">
+                        <span class="pill">TensorFlow</span>
+                        <span class="pill">PyTorch</span>
+                        <span class="pill">Scikit-learn</span>
+                        <span class="pill">OpenCV</span>
+                        <span class="pill">Transformers</span>
+                        <span class="pill">Git</span>
+                        <span class="pill">Pandas</span>
+                        <span class="pill">NumPy</span>
+                        <span class="pill">Flask</span>
+                        <span class="pill">Streamlit</span>
+                        <span class="pill">NLTK</span>
+                        <span class="pill">spaCy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What I've Built</span>
+                <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+
+                <div class="project-card reveal" data-tilt>
+                    <div class="project-glow"></div>
+                    <div class="project-num">01</div>
+                    <div class="project-header">
+                        <i class="fas fa-file-user project-icon"></i>
+                        <a href="https://github.com/Ahas-Kaushik" target="_blank" class="project-gh" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    <h3>Resume Parser &amp; Analyzer</h3>
+                    <p>
+                        An NLP-driven system that extracts structured candidate data from resumes
+                        and automates job matching using TF-IDF scores, semantic similarity, and
+                        named entity recognition — streamlining the recruitment shortlisting process.
+                    </p>
+                    <div class="project-tags">
+                        <span>NLP</span><span>Python</span><span>NER</span><span>TF-IDF</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" data-tilt>
+                    <div class="project-glow"></div>
+                    <div class="project-num">02</div>
+                    <div class="project-header">
+                        <i class="fas fa-car-crash project-icon"></i>
+                        <a href="https://github.com/Ahas-Kaushik" target="_blank" class="project-gh" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    <h3>Road Accident Detection</h3>
+                    <p>
+                        A deep learning system for real-time video stream analysis to detect road
+                        accidents and support intelligent traffic monitoring, enabling faster
+                        emergency response.
+                    </p>
+                    <div class="project-tags">
+                        <span>Deep Learning</span><span>Computer Vision</span><span>OpenCV</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" data-tilt>
+                    <div class="project-glow"></div>
+                    <div class="project-num">03</div>
+                    <div class="project-header">
+                        <i class="fas fa-low-vision project-icon"></i>
+                        <a href="https://github.com/Ahas-Kaushik" target="_blank" class="project-gh" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    <h3>Edge Detection to Audio</h3>
+                    <p>
+                        A real-time computer vision app that converts live visual data into audio
+                        feedback, enhancing accessibility for visually impaired users through
+                        intelligent scene-to-sound mapping.
+                    </p>
+                    <div class="project-tags">
+                        <span>Computer Vision</span><span>Edge Detection</span><span>Audio</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" data-tilt>
+                    <div class="project-glow"></div>
+                    <div class="project-num">04</div>
+                    <div class="project-header">
+                        <i class="fas fa-language project-icon"></i>
+                        <a href="https://github.com/Ahas-Kaushik" target="_blank" class="project-gh" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    <h3>Multilingual Translation</h3>
+                    <p>
+                        A transformer-based web tool that automatically detects source language and
+                        translates multiple languages into English with high accuracy, built for
+                        real-time usability.
+                    </p>
+                    <div class="project-tags">
+                        <span>Transformers</span><span>NLP</span><span>Web App</span><span>Python</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ACHIEVEMENTS ===== -->
+    <section id="achievements" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Journey</span>
+                <h2 class="section-title"><span class="gradient-text">Achievements</span> &amp; Roles</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="achievements-grid">
+
+                <!-- Hackathons & Awards -->
+                <div class="achieve-col reveal">
+                    <div class="achieve-col-header">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Hackathons &amp; Awards</h3>
+                    </div>
+                    <div class="achieve-list">
+                        <div class="achieve-item">
+                            <div class="achieve-icon gold"><i class="fas fa-medal"></i></div>
+                            <div class="achieve-body">
+                                <h4>SRMIT Beyond Hack</h4>
+                                <p>National Level Hackathon — Runner Up (5th Position)</p>
+                            </div>
+                        </div>
+                        <div class="achieve-item">
+                            <div class="achieve-icon bronze"><i class="fas fa-award"></i></div>
+                            <div class="achieve-body">
+                                <h4>Cisco CFL Champions League</h4>
+                                <p>Bronze Winner</p>
+                            </div>
+                        </div>
+                        <div class="achieve-item">
+                            <div class="achieve-icon purple"><i class="fas fa-rocket"></i></div>
+                            <div class="achieve-body">
+                                <h4>Smart India Hackathon (SIH)</h4>
+                                <p>Advanced to the 2nd Round</p>
+                            </div>
+                        </div>
+                        <div class="achieve-item">
+                            <div class="achieve-icon purple"><i class="fas fa-code"></i></div>
+                            <div class="achieve-body">
+                                <h4>ML Matrix Hackathon</h4>
+                                <p>Participant</p>
+                            </div>
+                        </div>
+                        <div class="achieve-item">
+                            <div class="achieve-icon purple"><i class="fas fa-city"></i></div>
+                            <div class="achieve-body">
+                                <h4>Build for Bengaluru</h4>
+                                <p>Hackathon Participant</p>
+                            </div>
+                        </div>
+                        <div class="achieve-item">
+                            <div class="achieve-icon cyan"><i class="fas fa-star"></i></div>
+                            <div class="achieve-body">
+                                <h4>D-CET 2024</h4>
+                                <p>Statewide Rank 441</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leadership & Roles -->
+                <div class="achieve-col reveal">
+                    <div class="achieve-col-header">
+                        <i class="fas fa-user-tie"></i>
+                        <h3>Leadership &amp; Roles</h3>
+                    </div>
+                    <div class="achieve-list">
+                        <div class="achieve-item">
+                            <div class="achieve-icon purple"><i class="fas fa-users-cog"></i></div>
+                            <div class="achieve-body">
+                                <h4>Tech Lead — BMSCE Hackathon</h4>
+                                <p>Engineered an NLP evaluation app using TF-IDF scores, semantic similarity, and NER to assess user responses against reference models.</p>
+                            </div>
+                        </div>
+                        <div class="achieve-item">
+                            <div class="achieve-icon purple"><i class="fas fa-user-shield"></i></div>
+                            <div class="achieve-body">
+                                <h4>Team Lead — SPT Project</h4>
+                                <p>Managed a full team by analysing individual strengths and delegating tasks strategically, achieving high scores in the final semester.</p>
+                            </div>
+                        </div>
+                        <div class="achieve-item">
+                            <div class="achieve-icon cyan"><i class="fas fa-microchip"></i></div>
+                            <div class="achieve-body">
+                                <h4>Member — Gradient Tech Club</h4>
+                                <p>Active member of the AI/ML-focused technical club at BMS College of Engineering.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">
+                    Have a project idea, collaboration proposal, or just want to chat AI?
+                    I'd love to hear from you.
+                </p>
+            </div>
+            <div class="contact-grid">
+
+                <div class="contact-links reveal">
+                    <a href="mailto:ahaskaushik@gmail.com" class="contact-card">
+                        <div class="cc-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="cc-text">
+                            <h4>Email</h4>
+                            <p>ahaskaushik@gmail.com</p>
+                        </div>
+                        <i class="fas fa-arrow-right cc-arrow"></i>
+                    </a>
+                    <a href="tel:+916360962167" class="contact-card">
+                        <div class="cc-icon"><i class="fas fa-phone"></i></div>
+                        <div class="cc-text">
+                            <h4>Phone</h4>
+                            <p>+91 63609 62167</p>
+                        </div>
+                        <i class="fas fa-arrow-right cc-arrow"></i>
+                    </a>
+                    <a href="https://github.com/Ahas-Kaushik" target="_blank" class="contact-card">
+                        <div class="cc-icon"><i class="fab fa-github"></i></div>
+                        <div class="cc-text">
+                            <h4>GitHub</h4>
+                            <p>Ahas-Kaushik</p>
+                        </div>
+                        <i class="fas fa-arrow-right cc-arrow"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/ahas-kaushik" target="_blank" class="contact-card">
+                        <div class="cc-icon"><i class="fab fa-linkedin-in"></i></div>
+                        <div class="cc-text">
+                            <h4>LinkedIn</h4>
+                            <p>ahas-kaushik</p>
+                        </div>
+                        <i class="fas fa-arrow-right cc-arrow"></i>
+                    </a>
+                </div>
+
+                <div class="contact-cta reveal">
+                    <div class="cta-box">
+                        <div class="cta-glow"></div>
+                        <i class="fas fa-paper-plane cta-icon"></i>
+                        <h3>Open to Opportunities</h3>
+                        <p>
+                            I'm actively seeking internships and project collaborations in AI/ML,
+                            NLP, and Computer Vision. Whether it's research, a startup idea, or
+                            just a tech chat — reach out!
+                        </p>
+                        <a href="mailto:ahaskaushik@gmail.com" class="btn btn-primary">
+                            <span>Say Hello</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">AK<span>.</span></div>
+            <p>Designed &amp; Built by <strong>Ahas Kaushik</strong> &mdash; 2025</p>
+            <div class="footer-socials">
+                <a href="https://github.com/Ahas-Kaushik" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/ahas-kaushik" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:ahaskaushik@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
